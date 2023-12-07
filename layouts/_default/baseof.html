@@ -11,6 +11,11 @@
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
+
+        <!-- 支持数学方程的渲染 -->
+        <!-- 参考 https://ox-hugo.scripter.co/doc/equations/#mathjax-config-example -->
+        {{ partial "mathjax.html" }}
+
     </head>
     <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
         {{- /* Check theme isDark before body rendering */ -}}
